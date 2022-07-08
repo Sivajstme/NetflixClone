@@ -1,35 +1,36 @@
-import React,{useState} from  'react';
-import { Inner } from "./styles/jumbotron";
+import React from  'react';
+import { Inner,Container,Pane,SubTitle,Title } from "./styles/jumbotron";
 
 export default function Jumbotron({children, direction = 'row',...restProps}) {
 
 
     return(
         <Inner direction = {direction}>
-
-        {
-            /* <br />
-
             {
-                content[0].map((e, index) => {
-                    if(isPressed){
-                        while(limit > index){
-                            return (<Card key={index} name = {e}> </Card>)
-                        }
-                    }else{
-                        return <Card key = {index} name ={e}></Card>
-                    }
-                })
+                children
             }
-            <br/>
-            {
-                isPressed ?(
-                <button onClick={showMore}>showMore</button>):
-                <button onClick={showMore}>showLess</button>
-
-            } */
-        }
-
         </Inner>
     )
 }
+function JumbotronPane({children, ...restProps}) {
+    return <Pane {...restProps}>{children}</Pane>
+}
+
+Jumbotron.Container = function JumbotronContainer({children, ...restProps}){
+    return <Container {...restProps}>{children}</Container> 
+}
+
+Jumbotron.Pane = JumbotronPane;
+
+Jumbotron.SubTitle = function JumtronSubTitle({children,...restProps}) {
+    return <SubTitle {...restProps}>{children}</SubTitle>
+}
+
+Jumbotron.Title = function JumbotronTitle({children, ...restProps}) {
+    return <Title {...restProps}>{children}</Title>
+}
+
+// Jumbotron.Image = function JumbotronImage({children, ...restProps}) {
+
+//     return <image src = 
+// }
