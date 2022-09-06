@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     // <Jumbotron />
-      <Jumbotron.Container>
+      <Jumbotron.Container color='yellow'>
         {
           JumbotronJson.map((item) =>{
               return(<Jumbotron key={item.id} direction = {item.direction}>
