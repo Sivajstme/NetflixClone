@@ -34,6 +34,8 @@ export default function FooterContainer({children}){
                     <Footer.Link href='#'>Legal Notices</Footer.Link>    
                 </Footer.Column>
         </Footer.Row>
+        <Footer.Break/>
+        <Footer.Text>Netflix</Footer.Text>
     </Footer>
 
     );
