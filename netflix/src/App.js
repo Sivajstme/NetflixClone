@@ -8,9 +8,10 @@ export default function App() {
 
   return (
     <>
-      <AccordionComponent />
       <JumbotronContainer />
+      <AccordionComponent />
       <FooterContainer />
+
     </>
   );
 }

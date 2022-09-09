@@ -23,7 +23,7 @@ export const Pane = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 50px;
+  font-size: 35px;
   line-height: 1.1;
   margin-bottom: 8px;
   @media (max-width: 600px) {
@@ -32,7 +32,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  font-size: 26px;
+  font-size: 19px;
   font-weight: normal;
   line-height: normal;
   @media (max-width: 600px) {
