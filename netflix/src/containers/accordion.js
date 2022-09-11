@@ -3,7 +3,7 @@ import React from 'react';
 import  Accordion  from '../components/accordion';
 
 import Data from "../fixtures/faqs.json";
-
+import OptForm from '../components/opt-form';
 
 export default function  AccordionComponent() {
     return(
@@ -16,6 +16,11 @@ export default function  AccordionComponent() {
                             <Accordion.Body>{el.body}</Accordion.Body>
                         </Accordion.Item>
             )}
+            <OptForm>
+                <OptForm.Input placeholder='Email address' />
+                <OptForm.Button type='button'>Try it on</OptForm.Button>
+                <OptForm.Text>Ready to watch? Enter your email to create or restart your membership </OptForm.Text>
+            </OptForm>
         </Accordion>
     )
     
