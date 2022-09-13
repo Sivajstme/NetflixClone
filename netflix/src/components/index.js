@@ -7,3 +7,5 @@ export {default as Accordion} from './accordion';
 export {default as OptForm} from './opt-form';
 
 export {default as Header} from './Header';
+
+export {default as Feature} from './Feature';
