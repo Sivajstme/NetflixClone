@@ -1,12 +1,14 @@
 import React,{useState, useContext} from 'react';
+import {useHistory} from 'react-router-dom';
 import FooterContainer from '../containers/Footer';
 import {FireBaseContext} from '../context/firebase';
 import HeaderContainer  from '../containers/Header';
 import {Form} from '../components';
+import * as ROUTE from '../constants/routes';
 
 
 export default function SignIn(){
-
+    const history = useHistory();
     const {fireBase} = useContext(FireBaseContext);
     
     const [emailAddress, setEmailAddress] = useState('');
@@ -16,6 +18,16 @@ export default function SignIn(){
     const handleSignIn =(e)=> {
         e.preventDefault();
         console.log(emailAddress,password);
+        fireBase.auth()
+        .signInWithEmailAndPassword(emailAddress, password)
+        .then(()=>{
+            history.push(ROUTE.BROWSE)
+        })
+        .catch(error =>{
+            setEmailAddress('');
+            setPassword('');
+            setError(error.message)
+        })
     }
     const isInvalid = password === '' || emailAddress === '';
     //check form input elements are valid
