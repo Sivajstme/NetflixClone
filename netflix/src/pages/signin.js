@@ -17,7 +17,7 @@ export default function SignIn(){
 
     const handleSignIn =(e)=> {
         e.preventDefault();
-        console.log(emailAddress,password);
+        // console.log(emailAddress,password);
         fireBase.auth()
         .signInWithEmailAndPassword(emailAddress, password)
         .then(()=>{
