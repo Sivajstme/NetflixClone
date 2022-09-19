@@ -11,7 +11,7 @@ import * as ROUTE from '../constants/routes';
 
 export default function SignUp(){
     const history = useHistory();
-    const {firebase} = useContext(FireBaseContext);
+    const {fireBase} = useContext(FireBaseContext);
     const [firstName, setFirstName] = useState('');
     const [emailAddress, setEmailAddress] = useState('');
     const [password, setPassword] = useState('');
@@ -21,6 +21,27 @@ export default function SignUp(){
 
     const handleSignUp = (e) =>{
         e.preventDefault();
+
+        fireBase
+        .auth()
+        .createUserWithEmailAndPassword(emailAddress, password)
+        .then(result=>{
+            result.user.updateProfile({
+                displayName : firstName,
+                photoURL: ''
+            })
+            .then(()=>{
+                history.push(ROUTE.BROWSE)
+            })
+        })
+        .catch((err)=>{
+            setFirstName('');
+            setPassword('');
+            setEmailAddress('');
+            setError(err.message)
+        })
+
+
     }
     return <>
             <HeaderContainer>
