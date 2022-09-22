@@ -28,7 +28,7 @@ export default function SignUp(){
         .then(result=>{
             result.user.updateProfile({
                 displayName : firstName,
-                photoURL: ''
+                photoURL: Math.floor(Math.random() * 4)+ 1
             })
             .then(()=>{
                 history.push(ROUTE.BROWSE)
