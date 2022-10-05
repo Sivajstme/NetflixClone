@@ -9,7 +9,6 @@ export default function App() {
 
 const {user} = UseAuthListener();
   // console.log(user);
-
   return (
     <>
       <Router>
