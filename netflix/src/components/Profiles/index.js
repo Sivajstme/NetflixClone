@@ -19,7 +19,7 @@ Profiles.User = function ProfileUser({children, ...restProps}) {
     return <Item {...restProps}>{children}</Item>
 }  
 
-Profiles.Picture =({src, ...restProps})=>{
+Profiles.Picture =function ProfileNames({src, ...restProps}){
     return <Picture {...restProps} src={src ? `/images/users/${src}.png` : `/images/misc/loading.gif`}></Picture>
 }
 

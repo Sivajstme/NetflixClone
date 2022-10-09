@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import { useContent } from '../hooks';
 import selectionFilter from '../utils/selection-filter';
 import BrowseContainer from '../containers/browse';
+
 export default function Browse(){
 
     const {series} = useContent('series');
@@ -15,4 +16,5 @@ export default function Browse(){
 
     // console.log(slides);
     return <BrowseContainer slides= {slides} />
+    // return <h2> Hello from browser </h2>
 }
