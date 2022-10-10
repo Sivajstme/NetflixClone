@@ -13,3 +13,5 @@ export {default as Feature} from './Feature';
 export {default as Form} from './form';
 
 export {default as Profiles} from './Profiles';
+
+export {default as Loading} from './loading';
