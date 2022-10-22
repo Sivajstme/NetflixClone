@@ -23,10 +23,6 @@ export function SelectProfileContainer({user, setProfile}) {
                 <Profiles.Name>{user.displayName}</Profiles.Name>
                 </Profiles.User>    
             </Profiles.List>
-            {/* <Profiles.List>
-                <Profiles.Picture src={user.photoURL} />
-                <Profiles.Name>{user.displayName}</Profiles.Name>
-            </Profiles.List> */}
         </Profiles>
 
         </>
